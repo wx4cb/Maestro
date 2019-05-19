@@ -1,9 +1,10 @@
 import time
-import servocontrol
+from maestro import MaestroController
+
 
 # Create the servo controller
 print("Creating servo object")
-servos = servocontrol.ServoController()
+servos = MaestroController("/dev/ttyACM0")
 
 # Make a list of random bearing angles
 bearings=[-69,    -74,        38,        -70,        -2,        -18,        87,        -19,        88,        -44,        -85,        69,
